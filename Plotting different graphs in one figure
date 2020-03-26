@@ -1,0 +1,54 @@
+#Importing Libraries
+import matplotlib.pyplot as plt
+
+#Making figure outline (only for jupyter notebook)
+%matplotlib notebook
+
+#Insering Values
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [3,2,18,5,1,6,6,10,2,9]
+z =[7,2,5,9]
+slices = [7,2,2,13]
+cols = ['r','y','g','b']
+
+#Plotting Figure
+#2 graphs in one fig
+fig = plt.figure()
+#adding subplots in figure
+ax1 = fig.add_subplot(211) # hight,width,plot
+ax2 = fig.add_subplot(212)
+ax1.plot(x,y)
+ax2.bar(x,y) 
+fig.show()
+
+#3 graphs in one fig
+fig1 = plt.figure()
+ax3 = fig1.add_subplot(221) # hight,width,plot
+ax4 = fig1.add_subplot(222)
+ax5 = fig1.add_subplot(212)
+ax3.plot(x,y)
+ax4.pie(z,colors = cols)
+ax5.bar(x,y) 
+fig1.show()
+
+#3 graphs in one fig
+fig2 = plt.figure()
+ax6 = fig2.add_subplot(311) # hight,width,plot
+ax7 = fig2.add_subplot(312)
+ax8 = fig2.add_subplot(313)
+ax6.plot(x,y)
+ax7.pie(z,colors = cols)
+ax8.bar(x,y) 
+fig2.show()
+
+# 4 graphs in one fig
+fig3 = plt.figure()
+ax9 = fig3.add_subplot(221) # hight,width,plot
+ax10 = fig3.add_subplot(222)
+ax11 = fig3.add_subplot(223)
+ax12 = fig3.add_subplot(224)
+ax9.plot(x,y)
+ax10.pie(z,colors = cols)
+ax11.bar(x,y)
+ax12.hist(z)
+fig3.show()
