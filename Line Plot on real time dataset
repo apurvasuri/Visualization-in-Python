@@ -1,0 +1,26 @@
+#Making line Plot on Realtime changing data
+#Importing Libraries
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation   
+
+#To move figure outline
+%matplotlib notebook
+
+#using figure function
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+#using animation for real time plotting
+def animate(i):
+    data = open('hi.txt','r').read()
+    lines = data.split('\n')
+    a = []
+    b = []
+    for line in lines:
+        if len(line) > 1:
+            x, y = line.split(',')
+            a.append(int(x))
+            b.append(int(y))
+    ax1.clear()
+    ax1.plot(a, b)
+ani = animation.FuncAnimation(fig, animate, interval=1)
+plt.show()
