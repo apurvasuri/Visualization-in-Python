@@ -1,0 +1,32 @@
+#3a. A simple histogram
+import matplotlib.pyplot as plt
+x = [21,22,23,4,5,6,77,8,9,10,31,32,33,34,35,36,37,18,49,50,100,78,71,73,79,74]
+num_bins = 5
+plt.hist(x, num_bins,color='r', rwidth = 0.8)
+plt.show()
+
+#3b. Same histogram with an alpha value
+import matplotlib.pyplot as plt
+x = [21,22,23,4,5,6,77,8,9,10,31,32,33,34,35,36,37,18,49,50,100,78,71,73,79,74]
+num_bins = 5
+plt.hist(x, num_bins,color='r', alpha=0.5, rwidth = 0.8)
+plt.show()
+
+#3c. Same histogram with histtype attribute
+import matplotlib.pyplot as plt
+x = [21,22,23,4,5,6,77,8,9,10,31,32,33,34,35,36,37,18,49,50,100,78,71,73,79,74]
+num_bins = 5
+plt.hist(x, num_bins,color='r', alpha=0.5, rwidth = 0.8, histtype="stepfilled")
+plt.show()
+
+"""
+histtype : {'bar','barstacked','step','stepfilled'},optional
+            
+            The type of histogram to draw:
+                1) 'bar' is a traditional bar type histogram. If multiple data are given the bars are arranged side by side.
+                2) 'barstacked' is a bar-type histogram where multiple data are stacked on the top of each other.
+                3) 'step' generates a lineplot that is by default unfilled.
+                4) 'stepfilled' generates a lineplot that is by default filled.
+            
+            Default is 'bar'.
+"""
